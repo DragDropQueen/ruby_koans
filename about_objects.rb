@@ -21,7 +21,7 @@ class AboutObjects < Neo::Koan
 
   def test_every_object_has_an_id
     obj = Object.new
-    assert_equal __, obj.object_id.class
+    assert_equal Fixnum, obj.object_id.class
   end
 
   def test_every_object_has_different_id
@@ -31,10 +31,10 @@ class AboutObjects < Neo::Koan
   end
 
   def test_small_integers_have_fixed_ids
-    assert_equal __, 0.object_id
-    assert_equal __, 1.object_id
-    assert_equal __, 2.object_id
-    assert_equal __, 100.object_id
+    assert_equal 1, 0.object_id
+    assert_equal 3, 1.object_id
+    assert_equal 5, 2.object_id
+    assert_equal 201, 100.object_id
 
     # THINK ABOUT IT:
     # What pattern do the object IDs for small integers follow?
